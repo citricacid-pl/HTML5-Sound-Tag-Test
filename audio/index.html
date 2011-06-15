@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sound test - audio tag</title>
+</head>
+
+<body>
+<h1>Sound test - file formats</h1>
+<div>
+    <img src="img/coverSilence.jpg" alt="cover" style="float: left; width: 300px; height: 300px; border: 1px solid #ccc; margin: 0 10px;" />
+    Music by <a href="http://www.jamendo.com/pl/album/830">Silence</a> (CC <img src="http://imgjam.com/cc/by18.png" alt="by" /> <img src="http://imgjam.com/cc/sa18.png" alt="sa" />)
+</div>
+<hr />
+<div>Cellule.ogg<br />
+    <audio controls="controls" src="media/Cellule.ogg" style="display: block;">Not supported by browser</audio>
+</div>
+<div>Realite.ogg<br />
+    <audio controls="controls" src="media/Realite.ogg" style="display: block;">Not supported by browser</audio>
+</div>
+<hr />
+<div>Cellule.mp3<br />
+    <audio controls="controls" src="media/Cellule.mp3">Not supported by browser</audio>
+</div>
+<div>Realite.mp3<br />
+    <audio controls="controls" src="media/Realite.mp3">Not supported by browser</audio>
+</div>
+<hr />
+
+<h1 style="clear: both; margin-top: 10px;">Sound test - loops</h1>
+<div>Using loop attribute
+    <div>loop.ogg<br />
+        <audio src="media/loop2.ogg" controls="controls" loop="loop">Not supported by browser</audio>
+    </div>
+    <div>loop.mp3<br />
+        <audio src="media/loop2.mp3" controls="controls" loop="loop">Not supported by browser</audio>
+    </div>
+</div>
+<hr />
+<div>Using onended event
+    <div>loop.ogg<br />
+        <audio src="media/loop2.ogg" controls="controls" onended="this.play()">Not supported by browser</audio>
+    </div>
+    <div>loop.mp3<br />
+        <audio src="media/loop2.mp3" controls="controls" onended="this.play()">Not supported by browser</audio>
+    </div>
+</div>
+
+<h1>Automatic file format choice</h1>
+<div>Using one audio tag with source tags to play both file formats. Browser chooses the right one.<br />
+    <audio controls="controls">
+        <source src="media/loop2.ogg" type="audio/ogg" />
+        <source src="media/loop2.mp3" type="audio/mpeg" />
+        Not supported by browser
+    </audio>
+</div>
+
+<h1><a href="audiojs.html">Running audio with Javascript</a></h1>
+</body>
+</html>
